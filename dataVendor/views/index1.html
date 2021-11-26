@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div><h2>电力数据交易平台</h2></div>
+
+    <div id="vender">
+        <form>
+            
+        </form>
+      <button onclick="onLogin()">登录</button>
+      <form onsubmit="return false">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value="username"
+        /><br />
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" value="1" /><br />
+        
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" value="100" /><br />
+        <button onclick="onCreate()">Create Data</button>
+      </form>
+      <button onclick="onHandle()">Handle Request</button>
+      <pre id="notice"></pre>
+    </div>
+    <div id="buyer" class="hidden">
+      <button onclick="sendRequest()">Send Request</button>
+      <button onclick="readResponse()">Read Response</button>
+      <pre id="notice2"></pre>
+      </script>
+    </div>
+    <script async src="index.js"></script>
+  </body>
+</html>
