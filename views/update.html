@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="dt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>更新数据</title>
+  </head>
+  <body  οnlοad="init()">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">新增数据</h2>      
+      </div>
+      <div class="col-md-12">
+           <form class="form-inline" method="post" action="/create">
+             <div class="form-group">
+               <label>用户姓名</label>
+               <input type="text" id="username" name="username" class="form-control" />
+             </div>
+        <!--
+             <div class="form-group">
+               <label>用户编号</label>
+               <input type="text" id="userid" name="userid" class="form-control" />
+             </div> -->
+             <div class="form-group">
+               <label>用电量</label>
+               <input type="text" id="amount" name="amount" class="form-control" />
+             </div>
+             <div class="form-group">
+               <button class="btn btn-primary" type="submit">添加</button>
+         <!--      <button class="btn btn-primary" type="button" οnclick="dobaocun()">保存</button> -->
+             </div>
+           </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

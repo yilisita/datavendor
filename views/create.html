@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="dt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表格操作</title>
+  </head>
+  <body  οnlοad="init()">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+  
+    </div>
+  </div>
+  </body>
+</html>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>主页</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">电力数据交易平台</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link"  href="http://localhost:4000/home">首页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">新增数据</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:4000/read">查询数据</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:4000/transaction">我的交易</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">待开发</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="搜索" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">搜索</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="bg-light p-5 rounded">
+      <h2 class="text-center">新增数据</h2>      
+      <div class="col-md-12">
+           <form class="form-inline" method="post" action="/create">
+             <div class="form-group">
+               <label>用户姓名</label>
+               <input type="text" id="username" name="username" class="form-control" />
+             </div>
+             <div class="form-group">
+               <label>用电量</label>
+               <input type="text" id="amount" name="amount" class="form-control" />
+             </div>
+             <div class="form-group">
+               <button class="btn btn-primary" type="submit">添加</button>
+             </div>
+           </form>
+      </div>
+  </div>
+</main>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
