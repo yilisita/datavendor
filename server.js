@@ -116,7 +116,7 @@ app.post('/read', async (req, res, next) => {
         const id = req.body.userid;
         console.log(req.body, id);
         const output = await read(contract, id);
-        res.json({"用户名":"温家俊", "用户编号":"1", "用电量":"100"});
+        //res.json({"用户名":"温家俊", "用户编号":"1", "用电量":"100"});
         res.send(output);
     }catch(error){
         throw error;
@@ -187,6 +187,7 @@ app.get('/transaction/handle', async (req, res) => {
         try{
             const output = await handle(contract);
             //var output =  [{"id":"1", "proposal":"", "requestTime":"", "res":"-1"}]
+            console.log(output);
             res.json(output);
         }catch{
             throw error;
@@ -206,4 +207,3 @@ app.use(function(err, req, res, next){
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
-

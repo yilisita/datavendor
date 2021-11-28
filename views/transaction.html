@@ -34,6 +34,7 @@
     
     <!-- Custom styles for this template -->
     <link href="navbar-top-fixed.css" rel="stylesheet">
+    <link href="test.css" rel="stylesheet">
   </head>
   <body>
     
@@ -96,7 +97,9 @@
             .then(function(res){  
                 var text = res.data
                    // [{}, {}]json格式
-                //window.alert(text);
+                window.alert(text);
+                console.log(text);
+                text = JSON.parse(text);
                 var table_str = "<caption>所有交易</caption><thead><tr><td>交易编号</td><td>发起者</td><td>交易内容</td><td>交易时间</td><td>完成状态</td></tr></thead><tbody>";
                 for (var key in text){
                     
@@ -121,6 +124,7 @@
             .then(function(res){  
                 var text = res.data
                    // [{}, {}]json格式
+                text = JSON.parse(text);
                 var table_str = "<caption>处理结果</caption><thead><tr><td>交易编号</td><td>交易内容</td><td>交易时间</td><td>结果（单位:千瓦时）</td></tr></thead><tbody>";
                 for (var key in text){
                     

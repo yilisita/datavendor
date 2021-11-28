@@ -13,7 +13,8 @@ const channel = "mychannel";
 // 链码名
 const chaincode = "private";
 
-const org1 = 'Org1MSP'
+const org1 = 'Org1MSP';
+const org2 = 'Org2MSP';
 
 async function initOrg1(username){
 
@@ -114,16 +115,22 @@ async function readRequest(contract){
 // 需要背书
 async function handle(contract){
     try{
-        var res = await contract.evaluateTransaction('HandleRequest');
+        //var res = await contract.evaluateTransaction('HandleRequest');
+        //var resStr = res.toString();
+        var transaction_0 = contract.createTransaction('HandleRequest');
+        transaction_0.setEndorsingOrganizations(org1);
+        var res = await transaction_0.submit();
         var resStr = res.toString();
 
         if (resStr == ''){
             return "没有需要处理的请求";
         }
-        
+
         var transaction = contract.createTransaction('SendResponse');
-        transaction.setEndorsingOrganizations(org1);
+        transaction.setEndorsingOrganizations(org2);
         await transaction.submit(resStr);
+
+        return res.toString();
 
         return res.toString();
     }catch(err){
@@ -140,4 +147,3 @@ module.exports = {
     handle,
     update,
 }
-
